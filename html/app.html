@@ -16,7 +16,31 @@
     <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     </p>
-    <div style="height: 500px;"></div>
+
+    <div style="height: 100px;"></div>
+    <img id="wave" src="/src/wave.svg">
+    <div class="wrap-contents">
+
+        <svg height="200" width="200" xmlns="http://www.w3.org/2000/svg">
+            <image href="../src/cat.jpg" height="200" width="200"/>
+            <circle class="circle" 
+            cx="100" cy="100" r="95" stroke="#9C27B0" stroke-width="10" fill-opacity="0" 
+            stroke-dasharray="30">
+            <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="360 140 80"
+                to="0 140 80"
+                dur="3s" repeatCount="indefinite">
+            </animateTransform>
+        </circle>
+            
+        </svg>
+
+    </div>
+    
+    <div style="height: 100px;"></div>
+
     <p>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
     </p>
@@ -48,7 +72,17 @@
         btn.addEventListener('click', (e) => {
             modal.classList.toggle('show')
             modal.classList.toggle('fade')
+
+            document.body.classList.toggle('hidden')
         })
+
+        modal.addEventListener('click', (e)=> {
+            if (e.target.classList.contains('modal')) {
+                modal.classList.toggle('show')
+                document.body.classList.toggle('hidden')
+            }
+        })
+
     </script>
 </body>
 </html>
