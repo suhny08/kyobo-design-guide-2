@@ -1,0 +1,38 @@
+/* ---------- Skip this base code ---------- */
+* { box-sizing: border-box; } h1 { font-size: 24px; } h2 { margin-bottom: 0; font-size: 20px; } pre { padding: 8px; background: black; color: #fff; } .graph { padding: 4px; margin-top: 0; margin-bottom: 4px; } .container { border: 16px solid silver; } .item { padding: 8px; color: #fff; } .item--a { background: coral; } .item--b { background: royalblue; }
+
+/* ---------- display: inline-block (Minified CSS: 234 bytes) ---------- */
+.container--1 {
+  white-space: nowrap;
+  font-size: 0;
+  line-height: 0;
+}
+.container--1 .item {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 1.25;
+  font-size: 16px;
+}
+.container--1 .item--a { width: 120px; }
+.container--1 .item--b { width: calc(100% - 120px); }
+
+/* ---------- float: left (Minified CSS: 171 bytes) ---------- */
+.container--2::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.container--2 .item { float: left; }
+.container--2 .item--a { width: 120px; }
+.container--2 .item--b { width: calc(100% - 120px); }
+
+/* ---------- display: flex (Minified CSS: 95 bytes) ---------- */
+.container--3 { display: flex; }
+.container--3 .item--a { flex: 0 0 120px; }
+.container--3 .item--b { flex: 1; }
+
+/* ---------- display: grid (Minified CSS: 47 bytes) ---------- */
+.container--4 { 
+  display: grid; 
+  grid: auto / 120px 1fr;
+}

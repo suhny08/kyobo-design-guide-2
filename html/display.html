@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/display.css"/>
+</head>
+<body>
+
+    <h1>Comparison of CSS layout code brevity.</h1>
+<hr>
+
+<h2>display: inline-block</h2>
+<p class="graph" style="background-image: linear-gradient(to right, #ddd 234px, transparent 234px);">Minified CSS: 234 bytes</p>
+<div class="container container--1">
+  <div class="item item--a">.item--a</div>
+  <div class="item item--b">.item--b</div>
+</div>
+<hr>
+
+<h2>float: left</h2>
+<p class="graph" style="background-image: linear-gradient(to right, #ddd 171px, transparent 171px);">Minified CSS: 171 bytes</p>
+<div class="container container--2">
+  <div class="item item--a">.item--a</div>
+  <div class="item item--b">.item--b</div>
+</div>
+<hr>
+
+<h2>display: flex</h2>
+<p class="graph" style="background-image: linear-gradient(to right, #ddd 95px, transparent 95px);">Minified CSS: 95 bytes</p>
+<div class="container container--3">
+  <div class="item item--a">.item--a</div>
+  <div class="item item--b">.item--b</div>
+</div>
+<hr>
+
+<h2>display: grid</h2>
+<p class="graph" style="background-image: linear-gradient(to right, #ddd 47px, transparent 47px);">Minified CSS: 47 bytes</p>
+<div class="container container--4">
+  <div class="item item--a">.item--a</div>
+  <div class="item item--b">.item--b</div>
+</div>
+<hr>
+
+<h2> code </h2>
+<pre><code>.container--4 { 
+  display: grid; 
+  grid: auto / 120px 1fr;
+}</code></pre>
+    
+</body>
+</html>

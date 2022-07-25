@@ -13,9 +13,13 @@
     <button type="button" class="btn-modal">
         Button
     </button>
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
+    
+    <pre><code>modal.addEventListener('click', (e)=> {
+        if (e.target.classList.contains('modal')) {
+            modal.classList.toggle('show')
+            document.body.classList.toggle('hidden')
+        }
+    })</code></pre>
 
     <div style="height: 100px;"></div>
     <img id="wave" src="/src/wave.svg">
@@ -41,10 +45,7 @@
     
     <div style="height: 100px;"></div>
 
-    <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </p>
-
+    
     <div class="modal">
         <div class="modal-dialog">
             <div class="modal-content">
