@@ -1,0 +1,44 @@
+
+
+/*  상하로 움직이는 애니메이션 */
+.animation--1 {
+    -webkit-animation: shake-vertical 10s -1.5s ease-in-out infinite both;
+    animation: shake-vertical 10s -1.5s ease-in-out infinite both; 
+}
+
+@keyframes shake-vertical {
+    0%, 100% { transform: translateY(0); }
+    10%, 30%, 50%, 70% { transform: translateY(-4px); }
+    20%, 40%, 60% { transform: translateY(4px); }
+    80% { transform: translateY(5.4px); }
+    90% { transform: translateY(-5.4px); }
+}
+
+
+
+/* hue-rotate */
+.animation--2 {
+    animation: colorRotate 3s linear infinite; 
+}
+
+@-webkit-keyframes colorRoate {
+    100% { webkit-filter: hue-rotate(360deg); }
+}
+@keyframes colorRotate {
+    100% { filter: hue-rotate(360deg); }
+}
+
+
+
+/*  */
+.animation--3 {
+    animation: toggle-opacity 1s linear infinite;
+}
+@-webkit-keyframes  toggle-opacity {
+    0%	 { opacity:0; }
+    100% { opacity:1; }
+}
+@keyframes toggle-opacity {
+    0%	 { opacity:0; }
+    100% { opacity:1; }
+}
