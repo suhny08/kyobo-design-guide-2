@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="https://codepen.io/naradesign/pen/WNpbooq">
+    <title>Aspect-ratio</title>
+
+    <link rel="stylesheet" href="../css/reset.css"/>
+    <link rel="stylesheet" href="../css/ratio.css"/>
+</head>
+<body>
+
+    <h1>aspect-ratio</h1>
+
+<h2>Not use.</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mUpJ18MRe8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<hr>
+<div style="height: 20px;"></div>
+<h2>Use 'padding' property.👇</h2>
+<pre><code>
+    .utube {
+        position: relative;
+        padding-top: 56.25%; /* 315 / 560 * 100 */
+      }
+      .utube__iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+      }
+</code></pre>
+<div class="utube">
+  <iframe class="utube__iframe" width="560" height="315" src="https://www.youtube.com/embed/mUpJ18MRe8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+
+<hr>
+<div style="height: 20px;"></div>
+<h2>Use 'vw' value. ⚠️ Check desktop scroll.👇</h2>
+<pre><code>
+  .vw {
+    width: 100vw; /* ⚠️ Check desktop scroll. */
+    height: 56.25vw;
+  }
+</code></pre>
+<iframe class="vw" width="560" height="315" src="https://www.youtube.com/embed/mUpJ18MRe8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+<hr>
+<div style="height: 20px;"></div>
+<h2>Use 'aspect-ratio' property. ⚠️ Check caniuse.👇</h2>
+<pre><code>
+    .ratio {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 100 / 56.25; /* ⚠️ Check caniuse. */
+        /* https://caniuse.com/mdn-css_properties_aspect-ratio */
+      }
+</code></pre>
+<iframe class="ratio" width="560" height="315" src="https://www.youtube.com/embed/mUpJ18MRe8s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+</body>
+</html>
