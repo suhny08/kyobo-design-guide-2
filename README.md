@@ -20,3 +20,6 @@
     - hue-rotate
     - sharke-vertical 
     - opacity Animation
+
+### ratio.html 
+- 화면 비율(가로세로) 유지 
